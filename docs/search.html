@@ -130,26 +130,32 @@
             background-color: black;
             border: 0.5px solid black; 
         }
-        .signup{
-            margin-top: 22px;
-            margin-left: 835px;
-            margin-right: 20px;
-            font-size: 18px;
-            font-weight: bold;
+        input[type="search"] {
+            width: 300px;
+            font-size: 14px;
+            background-color: #242323;
+            border: 1px solid #242323;
+            color: #ffffff;
+            padding: 13px;
+            margin-top: 18px;
+            margin-left:15px;
+            border-radius: 26px;
         }
-        .Login{
-            margin-top: 15px;
-            margin-right: 7px;
-            margin-left: 2px;
-            margin-bottom: 20px;
-            background-color: #f5f9f6;
-            color: rgb(0, 0, 0);
-            font-weight: bold;
-            font-size: 15px;
-            border-radius: 18px;
-            padding: 8px;
-            width: 70px;
-            text-align: center;
+        .right {
+            overflow-y: scroll;
+            height: 93vh;
+        }
+        .right::-webkit-scrollbar {
+            width: 10px;
+        }
+        .right::-webkit-scrollbar-track {
+            background: #131212; 
+        }
+        .right::-webkit-scrollbar-thumb {
+            background: #545454; 
+        }
+        .right::-webkit-scrollbar-thumb:hover {
+            background: #555; 
         }
     </style>
 </head>
@@ -180,9 +186,7 @@
                 </div>
                 <div style="display: flex;">
                     <div class="search-option" style="display: flex;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M23.762,22.681 L17.569,16.586 C19.194,14.825 20.033,12.449 20.033,9.918 C20.034,4.443 15.591,0 10.017,0 C4.443,0 0,4.443 0,10.017 C0,15.591 4.443,20.034 10.017,20.034 C12.449,20.034 14.824,19.195 16.586,17.57 L22.681,23.765 C22.974,24.057 23.372,24.202 23.768,24.202 C24.165,24.202 24.563,24.057 24.856,23.765 C25.146,23.475 25.29,23.078 25.29,22.681 C25.29,22.285 25.146,21.888 24.856,21.598 L23.762,22.681 ZM10.017,18.027 C5.58,18.027 2.008,14.455 2.008,10.017 C2.008,5.58 5.58,2.008 10.017,2.008 C14.455,2.008 18.027,5.58 18.027,10.017 C18.027,14.455 14.455,18.027 10.017,18.027 Z"/>
-                        </svg>
+                        <svg data-encore-id="icon" role="img" aria-hidden="true" width="24" height="24" class="Svg-sc-ytk21e-0 bneLcE search-active-icon" viewBox="0 0 24 24"><path d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"></path><path d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"></path></svg>
                     </div>
                     <div class="search-text">
                         <a href="search.html" style="text-decoration: none; color: white;"><span style="font-weight:bold;">Search</span></a>
@@ -234,19 +238,22 @@
                         </style>
                         <svg data-encore-id="icon" role="img" aria-hidden="true" height="17" class="Svg-sc-ytk21e-0 cAMMLk IYDlXmBmmUKHveMzIPCF" viewBox="0 0 16 16"><path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path></svg>
                     </div>
-                    <div class="signup">
-                        <a href="signup.html" style="text-decoration: none; color:white";><span>Sign up</span></a>
-                    </div>
-                    <div class="Login">
-                        <span>Log in</span>
-                    </div>
+                    <form>
+                        <div class="search-bar" style="position: relative;">
+                            <svg style="position: absolute; top: 32px; left: 25px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                            </svg>
+                            <input type="search" id="search" name="seach" placeholder="What do you want to play?" style="padding-left: 30px;">
+                        </div>
+                    </form>
                 </div>
             </div>
             <br>
             <div class="home-content">
-                <img src="home1.jpg" alt="img1" style="height:300px; width:1100px;">
+                <img src="search1.jpg" style="width:1087px; height:auto;">
                 <br>
-                <img src="home2.jpg" alt="img2" style="height:300px; width:auto;">
+                <img src="search2.jpg" style="width:1087px; height:auto;">
             </div>
         </div>
     </div>
